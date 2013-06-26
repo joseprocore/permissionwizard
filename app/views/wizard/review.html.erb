@@ -1,0 +1,35 @@
+<h2><%= @account.name %> Permission Templates</h2>
+<% @templates.each do |template| %>
+  <h3><%= template.name %></h3>
+  <table id="<%= template.name %>" class="review_table">
+    <tr>
+      <th>Tab</th>
+      <th>None</th>
+      <th>Read Only</th>
+      <th>Standard</th>
+      <th>Admin</th>
+    </tr>
+  <%= form_for template do |f| %>
+	  <% all_tabs.each do |tab| %>
+      <tr>
+        <td>
+          <%= f.label tab %>
+        </td>
+        <td>
+          <%= f.radio_button tab, 'None', :disabled => 'disabled' %>
+        </td>
+        <td>
+          <%= f.radio_button tab, 'Read Only', :disabled => 'disabled' %>
+        </td>
+        <td>
+          <%= f.radio_button tab, 'Standard', :disabled => 'disabled' %>
+        </td>
+        <td>
+          <%= f.radio_button tab, 'Admin', :disabled => 'disabled' %>
+        </td>
+      </tr>
+    <% end %>
+  <% end %>
+  </table>
+<% end %>
+

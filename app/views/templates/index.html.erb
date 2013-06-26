@@ -1,0 +1,61 @@
+<h1>Listing templates</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Home</th>
+    <th>Emails</th>
+    <th>Bidding</th>
+    <th>Prime contract</th>
+    <th>Commitments</th>
+    <th>Change orders</th>
+    <th>Rfis</th>
+    <th>Submittals</th>
+    <th>Transmittals</th>
+    <th>Punch list</th>
+    <th>Meetings</th>
+    <th>Schedule</th>
+    <th>Daily log</th>
+    <th>Reports</th>
+    <th>Photos</th>
+    <th>Drawings</th>
+    <th>Documents</th>
+    <th>Directory</th>
+    <th>Admin</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @templates.each do |template| %>
+  <tr>
+    <td><%= template.name %></td>
+    <td><%= template.home %></td>
+    <td><%= template.emails %></td>
+    <td><%= template.bidding %></td>
+    <td><%= template.prime_contract %></td>
+    <td><%= template.commitments %></td>
+    <td><%= template.change_orders %></td>
+    <td><%= template.rfis %></td>
+    <td><%= template.submittals %></td>
+    <td><%= template.transmittals %></td>
+    <td><%= template.punch_list %></td>
+    <td><%= template.meetings %></td>
+    <td><%= template.schedule %></td>
+    <td><%= template.daily_log %></td>
+    <td><%= template.reports %></td>
+    <td><%= template.photos %></td>
+    <td><%= template.drawings %></td>
+    <td><%= template.documents %></td>
+    <td><%= template.directory %></td>
+    <td><%= template.admin %></td>
+    <td><%= link_to 'Show', template %></td>
+    <td><%= link_to 'Edit', edit_template_path(template) %></td>
+    <td><%= link_to 'Destroy', template, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Template', new_template_path %>

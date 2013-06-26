@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Read only text:</b>
+  <%= @tab.read_only_text %>
+</p>
+
+<p>
+  <b>Standard text:</b>
+  <%= @tab.standard_text %>
+</p>
+
+<p>
+  <b>Admin text:</b>
+  <%= @tab.admin_text %>
+</p>
+
+<p>
+  <b>Workflow text:</b>
+  <%= @tab.workflow_text %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @tab.note %>
+</p>
+
+
+<%= link_to 'Edit', edit_tab_path(@tab) %> |
+<%= link_to 'Back', tabs_path %>

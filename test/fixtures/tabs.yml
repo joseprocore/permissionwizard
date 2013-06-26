@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  read_only_text: MyString
+  standard_text: MyString
+  admin_text: MyString
+  workflow_text: MyString
+  note: MyString
+
+two:
+  read_only_text: MyString
+  standard_text: MyString
+  admin_text: MyString
+  workflow_text: MyString
+  note: MyString

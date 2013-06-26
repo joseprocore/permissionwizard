@@ -1,0 +1,31 @@
+<table class="review_table">
+  <tr>
+    <th></th>
+    <th>None</th>
+    <th>Read Only</th>
+    <th>Standard</th>
+    <th>Admin</th>
+  </tr>
+<%= form_tag update_multiple_templates_path, :method => :put do %>
+  <% @templates.each do |template| %>
+    <%= fields_for "templates[]", template do |f| %>
+        <tr>
+          <td><%= template.name %></td>
+    	  	<td><%= f.radio_button current_tab, 'None' %></td>
+    	    <td><%= f.radio_button current_tab, 'Read Only' %></td>
+    	    <td><%= f.radio_button current_tab, 'Standard' %></td>
+    	    <td><%= f.radio_button current_tab, 'Admin' %></td>
+        </tr>
+    <% end %>
+  <% end %>
+  <%= hidden_field_tag :account_id, params[:account_id] %>
+  <%= hidden_field_tag :tab, params[:action] %>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><%= submit_tag "Save" %></td>
+  </tr>
+<% end %>
+</table>

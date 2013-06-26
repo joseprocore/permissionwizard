@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  home: MyString
+  emails: MyString
+  bidding: MyString
+  prime_contract: MyString
+  commitments: MyString
+  change_orders: MyString
+  rfis: 
+  submittals: MyString
+  transmittals: MyString
+  punch_list: MyString
+  meetings: MyString
+  schedule: MyString
+  daily_log: MyString
+  reports: MyString
+  photos: MyString
+  drawings: MyString
+  documents: MyString
+  directory: MyString
+  admin: MyString
+
+two:
+  name: MyString
+  home: MyString
+  emails: MyString
+  bidding: MyString
+  prime_contract: MyString
+  commitments: MyString
+  change_orders: MyString
+  rfis: 
+  submittals: MyString
+  transmittals: MyString
+  punch_list: MyString
+  meetings: MyString
+  schedule: MyString
+  daily_log: MyString
+  reports: MyString
+  photos: MyString
+  drawings: MyString
+  documents: MyString
+  directory: MyString
+  admin: MyString
