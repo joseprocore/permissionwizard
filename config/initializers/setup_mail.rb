@@ -5,3 +5,5 @@ ActionMailer::Base.smtp_settings = {
 	:user_name => ENV["GMAIL_USERNAME"],
     :password => ENV["GMAIL_PASSWORD"]
 }
+
+ActionMailer::Base.default_url_options[:host] = "permissionwizard.herokuapp.com"

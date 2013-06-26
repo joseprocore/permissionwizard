@@ -1,6 +1,6 @@
-<p>Hey <%= @admin.first_name %>-</p>
+Hey <%= @admin.first_name %>-
 
-<p><%= @account.name %> just completed the Permission Wizard!</p>
+<%= @account.name %> just completed the Permission Wizard!
 
-<p>You can find the templates here:
-<%= link_to "View Templates", @account %>
+You can find the templates here:
+View Templates: <%= account_url(@account) %>
