@@ -15,7 +15,6 @@ class AccountsController < ApplicationController
   def show
     @account = Account.find(params[:id])
     @templates = @account.templates
-    @template = Template.new
 
     respond_to do |format|
       format.html # show.html.erb

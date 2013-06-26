@@ -20,12 +20,13 @@
   <% end %>
   <%= hidden_field_tag :account_id, params[:account_id] %>
   <%= hidden_field_tag :tab, params[:action] %>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td><%= submit_tag "Save" %></td>
-  </tr>
+</table><br />
+  <div>
+      <% if params[:action] != 'admin' %>
+        <%= submit_tag "Save and Next" %>
+      <% else %>
+        <p> Send your templates to your Account Manager! </p>
+        <%= submit_tag "Save and Email" %>
+      <% end %>
+  </div>
 <% end %>
-</table>

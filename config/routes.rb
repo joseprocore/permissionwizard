@@ -42,7 +42,7 @@ Permissionwizard::Application.routes.draw do
 
   get "wizard/start", :as => :start
 
-  get "wizard/review"
+  get "wizard/review", :as => :review
 
   root :to => "accounts#new"
 

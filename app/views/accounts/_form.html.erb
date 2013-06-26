@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :admin_id, "Account Manager" %><br />
-    <%= f.collection_select(:admin_id, Admin.all, :id, :name, :prompt => 'Select')%>
+    <%= f.collection_select(:admin_id, Admin.all, :id, :full_name, :prompt => 'Select')%>
   </div>
   <div class="actions">
     <%= f.submit %>
