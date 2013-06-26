@@ -27976,3 +27976,260 @@ Served asset /templates.js - 304 Not Modified (0ms)
 Started GET "/assets/wizard.js?body=1" for 127.0.0.1 at 2013-06-26 10:03:08 -0700
 Served asset /wizard.js - 304 Not Modified (0ms)
 Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 10:42:25 -0700
+Processing by AccountsController#new as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1mSELECT "admins".* FROM "admins" [0m
+  Rendered accounts/_form.html.erb (45.9ms)
+  Rendered accounts/new.html.erb within layouts/application (48.7ms)
+Completed 200 OK in 87ms (Views: 67.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2013-06-26 10:42:26 -0700
+Served asset /accounts.css - 200 OK (0ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2013-06-26 10:42:26 -0700
+Served asset /admins.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-26 10:42:26 -0700
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/templates.css?body=1" for 127.0.0.1 at 2013-06-26 10:42:26 -0700
+Served asset /templates.css - 200 OK (0ms)
+
+
+Started GET "/assets/tabs.css?body=1" for 127.0.0.1 at 2013-06-26 10:42:26 -0700
+Served asset /tabs.css - 200 OK (0ms)
+
+
+Started GET "/assets/wizard.css?body=1" for 127.0.0.1 at 2013-06-26 10:42:26 -0700
+Served asset /wizard.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 10:42:26 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 10:42:26 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2013-06-26 10:42:26 -0700
+Served asset /accounts.js - 200 OK (0ms)
+
+
+Started GET "/assets/admins.js?body=1" for 127.0.0.1 at 2013-06-26 10:42:26 -0700
+Served asset /admins.js - 200 OK (0ms)
+
+
+Started GET "/assets/tabs.js?body=1" for 127.0.0.1 at 2013-06-26 10:42:26 -0700
+Served asset /tabs.js - 200 OK (0ms)
+
+
+Started GET "/assets/templates.js?body=1" for 127.0.0.1 at 2013-06-26 10:42:26 -0700
+Served asset /templates.js - 200 OK (0ms)
+
+
+Started GET "/assets/wizard.js?body=1" for 127.0.0.1 at 2013-06-26 10:42:26 -0700
+Served asset /wizard.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 10:43:16 -0700
+Processing by AccountsController#new as HTML
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT "admins".* FROM "admins" 
+  Rendered accounts/_form.html.erb (5.0ms)
+  Rendered accounts/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 10:44:55 -0700
+Connecting to database specified by database.yml
+Processing by AccountsController#new as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1mSELECT "admins".* FROM "admins" [0m
+  Rendered accounts/_form.html.erb (104.5ms)
+  Rendered accounts/new.html.erb within layouts/application (117.7ms)
+Completed 200 OK in 367ms (Views: 254.4ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 10:44:57 -0700
+Processing by AccountsController#new as HTML
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT "admins".* FROM "admins" 
+  Rendered accounts/_form.html.erb (13.3ms)
+  Rendered accounts/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 31ms (Views: 30.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2013-06-26 10:44:57 -0700
+Served asset /accounts.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2013-06-26 10:44:57 -0700
+Served asset /admins.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-26 10:44:57 -0700
+Served asset /scaffolds.css - 304 Not Modified (30ms)
+
+
+Started GET "/assets/tabs.css?body=1" for 127.0.0.1 at 2013-06-26 10:44:57 -0700
+Served asset /tabs.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/templates.css?body=1" for 127.0.0.1 at 2013-06-26 10:44:57 -0700
+Served asset /templates.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/wizard.css?body=1" for 127.0.0.1 at 2013-06-26 10:44:57 -0700
+Served asset /wizard.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 10:44:57 -0700
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 10:44:57 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2013-06-26 10:44:57 -0700
+Served asset /accounts.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins.js?body=1" for 127.0.0.1 at 2013-06-26 10:44:57 -0700
+Served asset /admins.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tabs.js?body=1" for 127.0.0.1 at 2013-06-26 10:44:57 -0700
+Served asset /tabs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/templates.js?body=1" for 127.0.0.1 at 2013-06-26 10:44:57 -0700
+Served asset /templates.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/wizard.js?body=1" for 127.0.0.1 at 2013-06-26 10:44:57 -0700
+Served asset /wizard.js - 304 Not Modified (4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 10:46:53 -0700
+Processing by AccountsController#new as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT "admins".* FROM "admins" [0m
+  Rendered accounts/_form.html.erb (4.4ms)
+  Rendered accounts/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2013-06-26 10:46:53 -0700
+Served asset /accounts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2013-06-26 10:46:53 -0700
+Served asset /admins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-26 10:46:53 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tabs.css?body=1" for 127.0.0.1 at 2013-06-26 10:46:53 -0700
+Served asset /tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates.css?body=1" for 127.0.0.1 at 2013-06-26 10:46:53 -0700
+Served asset /templates.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/wizard.css?body=1" for 127.0.0.1 at 2013-06-26 10:46:53 -0700
+Served asset /wizard.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 10:46:53 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 10:46:53 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2013-06-26 10:46:53 -0700
+Served asset /accounts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.js?body=1" for 127.0.0.1 at 2013-06-26 10:46:53 -0700
+Served asset /admins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tabs.js?body=1" for 127.0.0.1 at 2013-06-26 10:46:53 -0700
+Served asset /tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates.js?body=1" for 127.0.0.1 at 2013-06-26 10:46:53 -0700
+Served asset /templates.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/wizard.js?body=1" for 127.0.0.1 at 2013-06-26 10:46:53 -0700
+Served asset /wizard.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 10:47:01 -0700
+Processing by AccountsController#new as HTML
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT "admins".* FROM "admins" 
+  Rendered accounts/_form.html.erb (5.3ms)
+  Rendered accounts/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2013-06-26 10:47:01 -0700
+Served asset /accounts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2013-06-26 10:47:01 -0700
+Served asset /admins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-26 10:47:01 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tabs.css?body=1" for 127.0.0.1 at 2013-06-26 10:47:01 -0700
+Served asset /tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates.css?body=1" for 127.0.0.1 at 2013-06-26 10:47:01 -0700
+Served asset /templates.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/wizard.css?body=1" for 127.0.0.1 at 2013-06-26 10:47:01 -0700
+Served asset /wizard.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 10:47:01 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 10:47:01 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2013-06-26 10:47:01 -0700
+Served asset /accounts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.js?body=1" for 127.0.0.1 at 2013-06-26 10:47:02 -0700
+Served asset /admins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tabs.js?body=1" for 127.0.0.1 at 2013-06-26 10:47:02 -0700
+Served asset /tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates.js?body=1" for 127.0.0.1 at 2013-06-26 10:47:02 -0700
+Served asset /templates.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/wizard.js?body=1" for 127.0.0.1 at 2013-06-26 10:47:02 -0700
+Served asset /wizard.js - 304 Not Modified (0ms)
