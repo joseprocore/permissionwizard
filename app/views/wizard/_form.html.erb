@@ -1,11 +1,13 @@
-<table class="review_table">
-  <tr>
-    <th></th>
-    <th>None</th>
-    <th>Read Only</th>
-    <th>Standard</th>
-    <th>Admin</th>
-  </tr>
+<table class="review_table table table-bordered">
+  <thead>
+    <tr>
+      <th></th>
+      <th>None</th>
+      <th>Read Only</th>
+      <th>Standard</th>
+      <th>Admin</th>
+    </tr>
+  </thead>
 <%= form_tag update_multiple_templates_path, :method => :put do %>
   <% @templates.each do |template| %>
     <%= fields_for "templates[]", template do |f| %>
@@ -23,10 +25,10 @@
 </table><br />
   <div>
       <% if params[:action] != 'admin' %>
-        <%= submit_tag "Save and Next" %>
+        <%= submit_tag "Save and Next", :class => 'btn' %>
       <% else %>
         <p> Send your templates to your Account Manager! </p>
-        <%= submit_tag "Save and Email" %>
+        <%= submit_tag "Save and Email", :class => 'btn' %>
       <% end %>
   </div>
 <% end %>

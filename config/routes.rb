@@ -56,9 +56,6 @@ Permissionwizard::Application.routes.draw do
   end
 
 
-  resources :tabs
-
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

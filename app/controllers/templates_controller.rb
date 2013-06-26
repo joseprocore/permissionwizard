@@ -51,6 +51,7 @@ class TemplatesController < ApplicationController
         format.html { redirect_to new_template_path(:account_id => @account.id), notice: 'Template was successfully created.' }
         format.json { render json: @template, status: :created, location: @template }
       else
+        flash[:error] = @template.errors.empty? ? "Error" : @template.errors.full_messages.to_sentence
         format.html { render action: "new" }
         format.json { render json: @template.errors, status: :unprocessable_entity }
       end
@@ -67,6 +68,7 @@ class TemplatesController < ApplicationController
         format.html { redirect_to @template, notice: 'Template was successfully updated.' }
         format.json { head :no_content }
       else
+        flash[:error] = @template.errors.empty? ? "Error" : @template.errors.full_messages.to_sentence
         format.html { render action: "edit" }
         format.json { render json: @template.errors, status: :unprocessable_entity }
       end

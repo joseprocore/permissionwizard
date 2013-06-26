@@ -1,3 +1,69 @@
-<h1>Wizard#transmittals</h1>
-<p>Find me in app/views/wizard/transmittals.html.erb</p>
+<div class="row">
+	<div class="span4 offset4">
+		<h1>Transmittals</h1>
+	</div>
+</div>
+<div class="row permission-bullets">
+	<div class="span3">
+		<h3>None</h3>
+		<ul>
+			<li>No Access</li>
+			<li>Do not see tab at top of page</li>
+		</ul>
+	</div>
+	<div class="span3">
+		<h3>Read Only</h3>
+		<ul>
+			<li>View all public transmittals</li>
+			<li>View private transmittals if on the distribution list</li>
+		</ul>
+	</div>
+	<div class="span3">
+		<h3>Standard</h3>
+		<ul>
+			<li>All Read Only permissions</li>
+			<li>Can email forward transmittals</li>
+			<li>Can create transmittals</li>
+			<li>Can edit transmittals that they created</li>
+		</ul>
+	</div>
+	<div class="span3">
+		<h3>Admin</h3>
+		<ul>
+			<li>Can view and edit all transmittals</li>
+			<li>Can move transmittals to the Recycle Bin</li>
+			<li>Can access the "Configure" menu to change Transmittals Settings</li>
+		</ul>
+	</div>
+</div>
+<hr>
+<div class="row workflow">
+	<div class="span6 workflow-text">
+		<h4> How it works: </h4>
+		Transmittals are created by one user and then sent out to one or more people.  There is no ball-in-court tracking.
+	</div>
+	<div class="span6 workflow-image">
+		<img src="https://s3.amazonaws.com/pro-core.com/prostore/7730592_procore_logo_small.gif?AWSAccessKeyId=0PFNH01C4MZVXKXZNK82&Expires=2003432978&Signature=xe%2BaL3JrNRyRFVX0H99gIlyBfwQ%3D">
+	</div>
+</div>
+
+<div class="row elaboration">
+	<div class="span12">
+	</div>
+</div>
+<br>
 <%= render :partial => 'form' %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

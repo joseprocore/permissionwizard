@@ -48,6 +48,7 @@ class AccountsController < ApplicationController
         format.html { redirect_to new_template_path(:account_id => @account.id), notice: 'Account was successfully created.' }
         format.json { render json: @account, status: :created, location: @account }
       else
+        flash[:error] = @account.errors.empty? ? "Error" : @account.errors.full_messages.to_sentence
         format.html { render action: "new" }
         format.json { render json: @account.errors, status: :unprocessable_entity }
       end
@@ -64,6 +65,7 @@ class AccountsController < ApplicationController
         format.html { redirect_to @account, notice: 'Account was successfully updated.' }
         format.json { head :no_content }
       else
+        flash[:error] = @account.errors.empty? ? "Error" : @account.errors.full_messages.to_sentence
         format.html { render action: "edit" }
         format.json { render json: @account.errors, status: :unprocessable_entity }
       end

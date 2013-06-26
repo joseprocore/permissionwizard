@@ -47,6 +47,7 @@ class AdminsController < ApplicationController
         format.html { redirect_to @admin, notice: 'Admin was successfully created.' }
         format.json { render json: @admin, status: :created, location: @admin }
       else
+        flash[:error] = @admin.errors.empty? ? "Error" : @admin.errors.full_messages.to_sentence
         format.html { render action: "new" }
         format.json { render json: @admin.errors, status: :unprocessable_entity }
       end
@@ -63,6 +64,7 @@ class AdminsController < ApplicationController
         format.html { redirect_to @admin, notice: 'Admin was successfully updated.' }
         format.json { head :no_content }
       else
+        flash[:error] = @admin.errors.empty? ? "Error" : @admin.errors.full_messages.to_sentence
         format.html { render action: "edit" }
         format.json { render json: @admin.errors, status: :unprocessable_entity }
       end

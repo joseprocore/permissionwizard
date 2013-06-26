@@ -1,0 +1,8 @@
+<div id="flash">
+	<% flash.each do |type, message| %>
+		<div class="alert <%= type %>" >
+			<button class="close" data-dismiss="alert">x</button>
+			<%= flash[type] %>
+		</div>
+	<% end %>
+</div>

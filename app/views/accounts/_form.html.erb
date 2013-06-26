@@ -1,25 +1,14 @@
 <%= form_for(@account) do |f| %>
-  <% if @account.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@account.errors.count, "error") %> prohibited this account from being saved:</h2>
-
-      <ul>
-      <% @account.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
+  <br />
   <div class="field">
-    <%= f.label :admin_id, "Account Manager" %><br />
+    <%= f.label :admin_id, "Account Manager" %>
     <%= f.collection_select(:admin_id, Admin.all, :id, :full_name, :prompt => 'Select')%>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Next", :class => "btn" %>
   </div>
 <% end %>
