@@ -1,4 +1,7 @@
 Permissionwizard::Application.routes.draw do
+  resources :admins
+
+
   get "wizard/home"
 
   get "wizard/emails"

@@ -1,5 +1,7 @@
-<h1>New template</h1>
+<h2>
+  <%= @account.name if @account %>
+</h2>
 
-<%= render 'form' %>
+<%= render :partial => 'shared/new_template_table' %>
 
-<%= link_to 'Back', templates_path %>
+<%= link_to "Customize my templates", start_path(:account_id => @account.id), :id => :customize_my_templates %>

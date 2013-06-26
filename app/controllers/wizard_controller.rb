@@ -67,6 +67,8 @@ class WizardController < ApplicationController
   end
 
   def review
+    @admin = @account.admin
+    AdminMailer.initial_results(@admin).deliver
   end
 
 

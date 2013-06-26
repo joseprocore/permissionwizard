@@ -24,6 +24,8 @@ class TemplatesController < ApplicationController
   # GET /templates/new
   # GET /templates/new.json
   def new
+    @account = Account.find(params[:account_id])
+    @templates = @account.templates
     @template = Template.new
 
     respond_to do |format|
@@ -41,11 +43,12 @@ class TemplatesController < ApplicationController
   # POST /templates.json
   def create
     @account = Account.find(params[:template][:account_id])
+    @templates = @account.templates
     @template = Template.new(params[:template])
 
     respond_to do |format|
       if @template.save
-        format.html { redirect_to @account, notice: 'Template was successfully created.' }
+        format.html { redirect_to new_template_path(:account_id => @account.id), notice: 'Template was successfully created.' }
         format.json { render json: @template, status: :created, location: @template }
       else
         format.html { render action: "new" }

@@ -2,27 +2,7 @@
   <%= @account.name %>
 </h3>
 
-<table>
-	<tr>
-    <td><b>Name</b></td>
-  </tr>
-  <% if @templates %>
-    <% @templates.each do |template| %>
-      <tr>
-        <td><%= template.name %></td>
-      </tr>
-    <% end %>
-  <% end %>
-  <tr>
-    <%= form_for @template do |f| %>
-      <td>
-      <%= f.text_field :name %>
-      <%= f.hidden_field :account_id, :value => @account.id %>
-      <%= f.submit %>
-      </td>
-    <% end %>
-  </tr>
-</table>
+<%= render :partial => 'shared/new_template_table' %>
 
 
 <%= link_to "Customize my templates", start_path(:account_id => @account.id) %>
