@@ -45,7 +45,7 @@ class AccountsController < ApplicationController
 
     respond_to do |format|
       if @account.save
-        format.html { redirect_to new_template_path(:account_id => @account.id), notice: 'Account was successfully created.' }
+        format.html { redirect_to new_account_template_path(@account), notice: 'Account was successfully created.' }
         format.json { render json: @account, status: :created, location: @account }
       else
         flash[:error] = @account.errors.empty? ? "Error" : @account.errors.full_messages.to_sentence

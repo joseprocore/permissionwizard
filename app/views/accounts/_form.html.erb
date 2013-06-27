@@ -1,14 +1,23 @@
 <%= form_for(@account) do |f| %>
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="row">
+    <div class="span4 offset2">
+      <%= f.label :name, "What is the name of your company?" %>
+    </div>
+    <div class="span2">
+      <%= f.text_field :name %>
+    </div>
   </div>
-  <br />
-  <div class="field">
-    <%= f.label :admin_id, "Account Manager" %>
-    <%= f.collection_select(:admin_id, Admin.all, :id, :full_name, :prompt => 'Select')%>
+  <div class="row">
+    <div class="span4 offset2">
+      <%= f.label :admin_id, "Who is your Account Manager at Procore?" %>
+    </div>
+    <div class="span2">
+      <%= f.collection_select(:admin_id, Admin.all, :id, :full_name, :prompt => 'Select')%>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit "Next", :class => "btn" %>
+  <div class="row">
+    <div class="span2 offset8">
+      <%= f.submit "Next", :class => "btn" %>
+    </div>
   </div>
 <% end %>

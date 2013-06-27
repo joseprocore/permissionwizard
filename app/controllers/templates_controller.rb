@@ -36,6 +36,7 @@ class TemplatesController < ApplicationController
 
   # GET /templates/1/edit
   def edit
+    @account = Account.find(params[:account_id])
     @template = Template.find(params[:id])
   end
 
@@ -48,7 +49,7 @@ class TemplatesController < ApplicationController
 
     respond_to do |format|
       if @template.save
-        format.html { redirect_to new_template_path(:account_id => @account.id), notice: 'Template was successfully created.' }
+        format.html { redirect_to new_account_template_path(@account), notice: 'Template was successfully created.' }
         format.json { render json: @template, status: :created, location: @template }
       else
         flash[:error] = @template.errors.empty? ? "Error" : @template.errors.full_messages.to_sentence

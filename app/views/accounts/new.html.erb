@@ -1,4 +1,23 @@
-<h1>New account</h1>
-
-<%= render 'form' %>
-
+<div id="splash">
+  <div class="row">
+    <div id="welcome" class="span12">
+    	<h2>Welcome to Procore's Permission Wizard</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div id="benefits" class="span8 offset2">
+      <ul class="">
+        <li>Setting up Permission Templates is probably the most important part of your implementation.</li>
+        <li>Getting it done right will save a LOT of time and headaches down the line.</li>
+        <li>This interactive wizard will help you understand Procore's permission system and choose appropriate templates for your different project roles.</li>
+    </div>
+  </div>
+  <div id="account_image_holder" class="row">
+    <div class="span4 offset4">
+      <%= image_tag "https://s3.amazonaws.com/pro-core.com/prostore/7730592_procore_logo_small.gif?AWSAccessKeyId=0PFNH01C4MZVXKXZNK82&Expires=2003432978&Signature=xe%2BaL3JrNRyRFVX0H99gIlyBfwQ%3D" %>
+    </div>
+  </div>
+  <div id="account_form">
+    <%= render 'form' %>
+  </div>  
+</div>

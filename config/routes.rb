@@ -1,59 +1,24 @@
 Permissionwizard::Application.routes.draw do
   resources :admins
 
-
-  get "wizard/home"
-
-  get "wizard/emails"
-
-  get "wizard/bidding"
-
-  get "wizard/prime_contract"
-
-  get "wizard/commitments"
-
-  get "wizard/change_orders"
-
-  get "wizard/rfis"
-
-  get "wizard/submittals"
-
-  get "wizard/transmittals"
-
-  get "wizard/punch_list"
-
-  get "wizard/meetings"
-
-  get "wizard/schedule"
-
-  get "wizard/daily_log"
-
-  get "wizard/reports"
-
-  get "wizard/photos"
-
-  get "wizard/drawings"
-
-  get "wizard/documents"
-
-  get "wizard/directory"
-
-  get "wizard/admin"
-
-  get "wizard/start", :as => :start
-
-  get "wizard/review", :as => :review
-
-  root :to => "accounts#new"
-
-  resources :accounts
-
-
   resources :templates do
     collection do
       put :update_multiple
     end
   end
+
+  resources :accounts do
+    resources :templates do
+      collection do
+        put :update_multiple
+      end
+    end
+  end
+
+  match 'accounts(/:account_id(/:action))' => 'wizard#%{action}'
+
+  root :to => "accounts#new"
+
 
 
   # The priority is based upon order of creation:

@@ -4,4 +4,4 @@
 
 <%= render :partial => 'shared/new_template_table' %>
 
-<%= link_to "Customize my templates", start_path(:account_id => @account.id), :id => :customize_my_templates %>
+<%= link_to "Customize my templates", {:controller => :wizard, :action => :start}, :id => :customize_my_templates %>

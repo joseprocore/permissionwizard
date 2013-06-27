@@ -1,5 +1,5 @@
 class WizardController < ApplicationController
-  before_filter :load_resources, :except => :start
+  before_filter :load_resources
 
   def home
   end
