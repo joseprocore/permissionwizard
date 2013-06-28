@@ -22,7 +22,8 @@
   <% end %>
   <%= hidden_field_tag :account_id, params[:account_id] %>
   <%= hidden_field_tag :tab, params[:action] %>
-</table><br />
+</table>
+<br />
   <div>
       <% if params[:action] != 'admin' %>
         <%= submit_tag "Save and Next", :class => 'btn' %>

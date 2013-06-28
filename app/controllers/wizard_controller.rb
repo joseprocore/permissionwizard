@@ -64,11 +64,23 @@ class WizardController < ApplicationController
   end
 
   def start
+    @account = Account.find(params[:account_id])
+    if @account.templates.length < 3
+      flash[:error] = "Please create at least 3 templates before moving on."
+      redirect_to :back
+    end
   end
 
-  def review
+  def send_initial_email
     @admin = @account.admin
     AdminMailer.initial_results(@admin, @account, @templates).deliver
+    redirect_to @account
+  end
+
+  def send_update_email
+    @admin = @account.admin
+    AdminMailer.updated_results(@admin, @account, @templates).deliver
+    redirect_to @account
   end
 
 

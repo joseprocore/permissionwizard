@@ -20,6 +20,11 @@
   </div>
 </div>
 
-<%= render :partial => 'shared/new_template_table' %>
-
-<%= link_to "Customize my templates", {:controller => :wizard, :action => :start}, :id => :customize_my_templates %>
+<div class="row">
+  <div class="span4 offset4">
+    <%= render :partial => 'shared/new_template_table' %>
+    <hr>
+    <p>When you're finished...</p>
+    <%= link_to "Customize my templates", {:controller => :wizard, :action => :start}, :id => :customize_my_templates, :class => 'btn' %>
+  </div>
+</div>

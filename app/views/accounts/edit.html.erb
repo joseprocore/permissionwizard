@@ -1,6 +1,37 @@
-<h1>Editing account</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @account %> |
-<%= link_to 'Back', accounts_path %>
+<div class="row">
+  <div class="span12 centered">
+    <h2><%= @account.name %> Permission Templates</h2>
+  </div>
+</div>
+<%= form_tag update_multiple_templates_path, :method => :put do %>
+  <% @templates.each do |template| %>
+    <h3 class="centered"><%= template.name %></h3>
+    <table class="review_table table table-bordered table-condensed">
+      <thead>
+        <tr>
+          <th></th>
+          <th>None</th>
+          <th>Read Only</th>
+          <th>Standard</th>
+          <th>Admin</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= fields_for "templates[]", template do |f| %>
+          <% all_tabs.each do |tab| %>
+            <tr>
+              <td><%= f.label tab %></td>
+              <td><%= f.radio_button tab, 'None' %></td>
+              <td><%= f.radio_button tab, 'Read Only'%></td>
+              <td><%= f.radio_button tab, 'Standard'%></td>
+              <td><%= f.radio_button tab, 'Admin'%></td>
+            </tr>
+            <%= hidden_field_tag :account_id, @account.id %>
+            <%= hidden_field_tag :tab, params[:action] %>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+  <%= submit_tag "Save and Email", :class => 'btn' %>
+<% end %>

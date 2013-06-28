@@ -1,0 +1,6 @@
+<p>Hey <%= @admin.first_name %>-</p>
+
+<p><%= @account.name %> just updated their permission templates.</p>
+
+<p>You can find the updated templates here:</p>
+<p><%= link_to "View Templates", account_url(@account) %></p>

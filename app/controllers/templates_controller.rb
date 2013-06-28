@@ -89,12 +89,18 @@ class TemplatesController < ApplicationController
   end
 
   def update_multiple
-    redirect_to :back, :notice => "Please choose permissions for your templates" and return unless params[:templates]
+    @account = Account.find(params[:account_id])
+    unless params[:templates]
+      flash[:error] = "Please choose permissions for your templates before moving on"; 
+      redirect_to :back and return
+    end
     @templates = Template.update(params[:templates].keys, params[:templates].values)
-    redirect_to :controller => :wizard, :action => next_tab(params[:tab]), :account_id => params[:account_id]
+    if params[:tab] == 'edit'
+      redirect_to :controller => :wizard, :action => :send_update_email, :account_id => @account.id and return
+    else
+      redirect_to :controller => :wizard, :action => next_tab(params[:tab]), :account_id => @account.id and return
+    end
   end
-
-
 
 
 

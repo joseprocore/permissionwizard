@@ -36,6 +36,7 @@ class AccountsController < ApplicationController
   # GET /accounts/1/edit
   def edit
     @account = Account.find(params[:id])
+    @templates = @account.templates
   end
 
   # POST /accounts
@@ -83,4 +84,18 @@ class AccountsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def duplicate_templates
+    @account = Account.find(params[:id])
+    @new_account = @account.dup
+    @new_account.save!
+    templates = []
+    @account.templates.each do |template|
+      new_template = template.dup
+      new_template.account_id = @new_account.id
+      templates << new_template.save!
+    end
+    redirect_to edit_account_path(@new_account)
+  end
+
 end

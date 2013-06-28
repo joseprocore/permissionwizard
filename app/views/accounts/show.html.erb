@@ -1,6 +1,15 @@
-<h2><%= @account.name %> Permission Templates</h2>
+<div class="row">
+  <div class="span12 centered">
+    <h2><%= @account.name %> Permission Templates</h2>
+    <p> Need to change something? <%= link_to "Edit Templates", {:controller => :accounts, :action => :duplicate_templates}, :method => :post %> </p>
+  </div>
+</div>
 <% @templates.each do |template| %>
-  <h3><%= template.name %></h3>
+  <div class="header row">
+    <div class="span12 centered">
+      <h3><%= template.name %></h3>
+    </div>
+  </div>
   <table id="<%= template.name %>" class="review_table table table-bordered table-condensed">
     <tr>
       <th>Tab</th>
@@ -16,16 +25,16 @@
           <%= f.label tab %>
         </td>
         <td>
-          <%= f.radio_button tab, 'None', :disabled => 'disabled' %>
+          <%= f.radio_button tab, 'None', :disabled => true %>
         </td>
         <td>
-          <%= f.radio_button tab, 'Read Only', :disabled => 'disabled' %>
+          <%= f.radio_button tab, 'Read Only', :disabled => true%>
         </td>
         <td>
-          <%= f.radio_button tab, 'Standard', :disabled => 'disabled' %>
+          <%= f.radio_button tab, 'Standard', :disabled => true%>
         </td>
         <td>
-          <%= f.radio_button tab, 'Admin', :disabled => 'disabled' %>
+          <%= f.radio_button tab, 'Admin', :disabled => true%>
         </td>
       </tr>
     <% end %>

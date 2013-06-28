@@ -1,5 +1,22 @@
-[Explanation about how everything is going to work]
-<br>
-<br>
-
-<%= link_to "Get Started", :action => :home %>
+<div class="row">
+  <div class="header span8 offset2">
+    <h2>How to Use this Wizard</h2>
+    <ul>
+      <li>
+        On each page of the wizard, there is a breakdown of the different possible actions by permission level.
+      </li>
+      <li>
+        Read the workflow section and pick permissions that are appropriate to fit your business.
+      </li>
+      <li>
+        Make sure you specify permissions for each template, and then move on.
+      </li>
+    </ul>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="span4 offset4 centered">
+    <%= link_to "Get Started", {:action => :home}, :class => 'btn' %>
+  </div>
+</div>

@@ -25,7 +25,7 @@ module ApplicationHelper
   end  
 
   def sequence
-    all_tabs << 'review'
+    all_tabs << 'send_initial_email'
   end
 
   def next_tab(tabname)
