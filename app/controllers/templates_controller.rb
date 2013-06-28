@@ -89,6 +89,7 @@ class TemplatesController < ApplicationController
   end
 
   def update_multiple
+    redirect_to :back, :notice => "Please choose permissions for your templates" and return unless params[:templates]
     @templates = Template.update(params[:templates].keys, params[:templates].values)
     redirect_to :controller => :wizard, :action => next_tab(params[:tab]), :account_id => params[:account_id]
   end
