@@ -1,2 +1,47 @@
-<h1>Drawings</h1>
+<div class="row">
+  <div class="span4 offset4">
+    <h1><%= current_tab_title %></h1>
+  </div>
+</div>
+<div class="row permission-bullets">
+  <div class="span12">
+    <%= render :partial => "wizard/comparison_tables/#{current_tab}_comparison" %>
+  </div>
+</div>
+<hr>
+<div class="row workflow">
+  <div class="span6 workflow-text">
+    <h4> How it works: </h4>
+    <p>
+      Only Admins will be able to upload drawings, name them, and organize them into sets and disciplines.  Read Only and Standard users are the same and can both view the drawings.
+    </p>
+  </div>
+  <div class="span6 workflow-image">
+    <img src="https://s3.amazonaws.com/pro-core.com/prostore/7730592_procore_logo_small.gif?AWSAccessKeyId=0PFNH01C4MZVXKXZNK82&Expires=2003432978&Signature=xe%2BaL3JrNRyRFVX0H99gIlyBfwQ%3D">
+  </div>
+</div>
+<hr>
+<div class="row elaboration">
+  <div class="span12">
+    <h4>Our Recommendation:</h4>
+    <p>
+      The person in charge of organizing your drawings should be an "Admin" and anyone you want viewing the drawings should be a "Read Only".  (This person will go through each sheet of the drawing set and name it through Procore.)
+    </p>
+  </div>
+</div>
+<br>
 <%= render :partial => 'form' %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

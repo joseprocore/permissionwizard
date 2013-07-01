@@ -1,27 +1,36 @@
 <div class="row">
-	<div class="span4 offset4">
-		<h1><%= current_tab_title %></h1>
-	</div>
+  <div class="span4 offset4">
+    <h1><%= current_tab_title %></h1>
+  </div>
 </div>
 <div class="row permission-bullets">
-	<div class="span12">
+  <div class="span12">
     <%= render :partial => "wizard/comparison_tables/#{current_tab}_comparison" %>
-	</div>
+  </div>
 </div>
 <hr>
 <div class="row workflow">
-	<div class="span6 workflow-text">
-		<h4> How it works: </h4>
-		The Home tab is your "Project Dashboard". Users will only see items here that they already have access to on the other tools.  Full Project Administrators should be Admins and everyone else should be Read Only users.
-	</div>
-	<div class="span6 workflow-image">
-		<img src="https://s3.amazonaws.com/pro-core.com/prostore/7730592_procore_logo_small.gif?AWSAccessKeyId=0PFNH01C4MZVXKXZNK82&Expires=2003432978&Signature=xe%2BaL3JrNRyRFVX0H99gIlyBfwQ%3D">
-	</div>
+  <div class="span6 workflow-text">
+    <h4> How it works: </h4>
+    <p>
+      Standard level users can create Submittals, but they can only assign them "upstream" to an Admin.  Admins can assign Submittals to both Standards and other Admins.  This allows them to "re-route" RFIs to the appropriate location.
+    </p>
+    <p>
+      Ex: A subcontractor might be a "Standard" level user and an architect might also be a "Standard".  We don't want them assigning items directly to one another, so the Subcontractor must assign the Submittal to the Project Manager first (an Admin) who reviews it, then re-assigns it to the Architect.
+    </p>
+  </div>
+  <div class="span6 workflow-image">
+    <img src="https://s3.amazonaws.com/pro-core.com/prostore/7730592_procore_logo_small.gif?AWSAccessKeyId=0PFNH01C4MZVXKXZNK82&Expires=2003432978&Signature=xe%2BaL3JrNRyRFVX0H99gIlyBfwQ%3D">
+  </div>
 </div>
-
+<hr>
 <div class="row elaboration">
-	<div class="span12">
-	</div>
+  <div class="span12">
+    <h4>Our Recommendation:</h4>
+    <p>
+      Anyone who should be able to create Submittals or who will ever be responding to an Submittal should be a Standard.  (Usually Architects/Engineers, Consultants, and sometimes Owners and Subcontractors).  Make sure to set at least one template as an "Admin" on the tool, or your "Standards" will have no one to assign their submittals to.
+    </p>
+  </div>
 </div>
 <br>
 <%= render :partial => 'form' %>
