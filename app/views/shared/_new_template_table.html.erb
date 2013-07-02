@@ -1,13 +1,13 @@
 <h4>Templates</h4>
-<ul class="unstyled">
+<ol class="">
   <% if @templates %>
     <% @templates.each do |template| %>
-      <li><%= template.name %></li>
+      <li><%= template.name %> <%= link_to 'x', [@account, template], method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete_button' %></li>
     <% end %>
   <% end %>
     <%= form_for @template do |f| %>
-      <li><%= f.text_field :name %></li>
-      <li><%= f.submit "Add Template", :class => 'btn' %></li>
-      </ul>
-       <%= f.hidden_field :account_id, :value => @account.id %>
+</ol>
+      <%= f.text_field :name %>
+      <%= f.submit "Add Template", :class => 'btn' %>
+      <%= f.hidden_field :account_id, :value => @account.id %>
     <% end %>

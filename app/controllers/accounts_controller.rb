@@ -46,6 +46,7 @@ class AccountsController < ApplicationController
 
     respond_to do |format|
       if @account.save
+        Account.copy_templates(1, @account.id)
         format.html { redirect_to new_account_template_path(@account), notice: 'Account was successfully created.' }
         format.json { render json: @account, status: :created, location: @account }
       else
@@ -89,13 +90,9 @@ class AccountsController < ApplicationController
     @account = Account.find(params[:id])
     @new_account = @account.dup
     @new_account.save!
-    templates = []
-    @account.templates.each do |template|
-      new_template = template.dup
-      new_template.account_id = @new_account.id
-      templates << new_template.save!
-    end
+    Account.copy_templates(@account.id, @new_account.id)
     redirect_to edit_account_path(@new_account)
   end
+
 
 end

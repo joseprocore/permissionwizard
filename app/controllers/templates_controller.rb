@@ -66,7 +66,7 @@ class TemplatesController < ApplicationController
 
     respond_to do |format|
       if @template.update_attributes(params[:template])
-        format.html { redirect_to @template, notice: 'Template was successfully updated.' }
+        format.html { redirect_to :back, notice: 'Template was successfully updated.' }
         format.json { head :no_content }
       else
         flash[:error] = @template.errors.empty? ? "Error" : @template.errors.full_messages.to_sentence
@@ -83,7 +83,7 @@ class TemplatesController < ApplicationController
     @template.destroy
 
     respond_to do |format|
-      format.html { redirect_to templates_url }
+      format.html { redirect_to :back }
       format.json { head :no_content }
     end
   end
