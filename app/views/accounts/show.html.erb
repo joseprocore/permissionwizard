@@ -20,7 +20,11 @@
     </tr>
   <%= form_for template do |f| %>
 	  <% all_tabs.each do |tab| %>
-      <tr>
+      <% if @differences[template.name] and @differences[template.name].include? tab %>
+        <tr class="different_row">
+      <% else %>
+        <tr>
+      <% end %>
         <td>
           <%= f.label tab %>
         </td>

@@ -15,6 +15,8 @@ class AccountsController < ApplicationController
   def show
     @account = Account.find(params[:id])
     @templates = @account.templates
+    @defaults = Template.where(is_default: true).order(:id)
+    @differences = Template.differences(@templates, @defaults)
 
     respond_to do |format|
       format.html # show.html.erb
