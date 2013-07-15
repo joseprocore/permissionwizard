@@ -90,8 +90,8 @@ class TemplatesController < ApplicationController
 
   def update_multiple
     @account = Account.find(params[:account_id])
-    unless params[:templates]
-      flash[:error] = "Please choose permissions for your templates before moving on"; 
+    unless params[:templates].length == @account.templates.count
+      flash[:error] = "Please choose permissions for all of your templates before moving on"; 
       redirect_to :back and return
     end
     @templates = Template.update(params[:templates].keys, params[:templates].values)

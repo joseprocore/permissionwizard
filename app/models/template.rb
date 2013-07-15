@@ -6,8 +6,7 @@ class Template < ActiveRecord::Base
   def copy_to(account_id)
     copy = self.dup
     copy.account_id = account_id
-    copy.save!
-    copy
+    copy.save
   end
 
 end

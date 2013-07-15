@@ -1,0 +1,38 @@
+.container {
+  padding-bottom: 5em;
+}
+
+.review_table{
+  td, th {
+    text-align: center;
+    width: 20%;
+  }
+}
+
+#benefits li {
+  margin-top: .5em;
+}
+
+#account_image_holder, #account_form  {
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+.header {
+  h2, h3 {
+    text-align: center;
+  }
+}
+
+.centered, #welcome, h1, .workflow-image, #account_image_holder, #flash div {
+  text-align: center;
+  text-align: center;
+}
+
+.container {
+  padding-bottom: 6em;
+}
+
+.delete_button {
+  color: red;
+}
