@@ -29,7 +29,7 @@ class Template < ActiveRecord::Base
     templates.each do |template|
       comparisons.each do |comparison|
         if template.name == comparison.name
-          differences[template.name] = template.different_from(comparisons[templates.index(template)])
+          differences[template.name] = template.different_from(comparison)
         end
       end
     end
