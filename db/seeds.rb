@@ -38,6 +38,8 @@ architect_engineer = Template.create ({
   documents: "Standard",
   directory: "None",
   admin: "None",
+  is_default: true,
+  default: 1,
   account_id: default_account.id
 })
 
@@ -62,6 +64,8 @@ foreman_superintendent = Template.create({
   documents: "Standard",
   directory: "Read Only",
   admin: "None",
+  is_default: true,
+  default: 2,
   account_id: default_account.id
 })
 
@@ -86,6 +90,8 @@ owner_cm = Template.create({
   documents: "Read Only",
   directory: "Read Only",
   admin: "None",
+  is_default: true,
+  default: 3,
   account_id: default_account.id
 })
 
@@ -110,6 +116,8 @@ project_manager = Template.create({
   documents: "Admin",
   directory: "Admin",
   admin: "Admin",
+  is_default: true,
+  default: 4,
   account_id: default_account.id
 })
 
@@ -134,6 +142,8 @@ subcontractor = Template.create({
   documents: "Read Only",
   directory: "None",
   admin: "None",
+  is_default: true,
+  default: 5,
   account_id: default_account.id
 })
 
