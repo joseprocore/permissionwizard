@@ -40,7 +40,7 @@ class AdminsController < ApplicationController
   # POST /admins
   # POST /admins.json
   def create
-    @admin = Admin.new(params[:admin])
+    @admin = Admin.new(admin_params)
 
     respond_to do |format|
       if @admin.save
@@ -60,7 +60,7 @@ class AdminsController < ApplicationController
     @admin = Admin.find(params[:id])
 
     respond_to do |format|
-      if @admin.update_attributes(params[:admin])
+      if @admin.update_attributes(admin_params)
         format.html { redirect_to @admin, notice: 'Admin was successfully updated.' }
         format.json { head :no_content }
       else
@@ -85,6 +85,11 @@ class AdminsController < ApplicationController
 
 
 
+  private
+
+  def admin_params
+    params.require(:admin).permit(:email, :first_name, :last_name)
+  end
 
 
 

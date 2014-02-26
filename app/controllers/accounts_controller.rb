@@ -44,7 +44,7 @@ class AccountsController < ApplicationController
   # POST /accounts
   # POST /accounts.json
   def create
-    @account = Account.new(params[:account])
+    @account = Account.new(account_params)
 
     respond_to do |format|
       if @account.save
@@ -65,7 +65,7 @@ class AccountsController < ApplicationController
     @account = Account.find(params[:id])
 
     respond_to do |format|
-      if @account.update_attributes(params[:account])
+      if @account.update_attributes(account_params)
         format.html { redirect_to @account, notice: 'Account was successfully updated.' }
         format.json { head :no_content }
       else
@@ -96,5 +96,10 @@ class AccountsController < ApplicationController
     redirect_to edit_account_path(@new_account)
   end
 
+  private
+
+  def account_params
+    params.require(:account).permit(:name, :admin_id)
+  end
 
 end

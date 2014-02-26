@@ -29,6 +29,8 @@ Permissionwizard::Application.configure do
   config.action_mailer.default :charset => "utf-8"
 
 
+  config.eager_load = true
+
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 

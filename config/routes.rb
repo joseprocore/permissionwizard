@@ -17,7 +17,7 @@ Permissionwizard::Application.routes.draw do
 
   post 'accounts/:id/duplicate_templates', :to => 'accounts#duplicate_templates'
 
-  match 'accounts(/:account_id(/:action))' => 'wizard#%{action}'
+  get 'accounts(/:account_id(/:action))' => 'wizard#%{action}'
 
   root :to => "accounts#new"
 

@@ -40,7 +40,7 @@ class TabsController < ApplicationController
   # POST /tabs
   # POST /tabs.json
   def create
-    @tab = Tab.new(params[:tab])
+    @tab = Tab.new(tab_params)
 
     respond_to do |format|
       if @tab.save
@@ -59,7 +59,7 @@ class TabsController < ApplicationController
     @tab = Tab.find(params[:id])
 
     respond_to do |format|
-      if @tab.update_attributes(params[:tab])
+      if @tab.update_attributes(tab_params)
         format.html { redirect_to @tab, notice: 'Tab was successfully updated.' }
         format.json { head :no_content }
       else
@@ -80,4 +80,11 @@ class TabsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
+
+  def tab_params
+    params.require(:tab).permit(:admin_text, :note, :read_only_text, :standard_text, :workflow_text, :name)
+  end
+
 end

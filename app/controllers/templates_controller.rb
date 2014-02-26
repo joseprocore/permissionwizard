@@ -45,7 +45,7 @@ class TemplatesController < ApplicationController
   def create
     @account = Account.find(params[:template][:account_id])
     @templates = @account.templates
-    @template = Template.new(params[:template])
+    @template = Template.new(template_params)
 
     respond_to do |format|
       if @template.save
@@ -65,7 +65,7 @@ class TemplatesController < ApplicationController
     @template = Template.find(params[:id])
 
     respond_to do |format|
-      if @template.update_attributes(params[:template])
+      if @template.update_attributes(template_params)
         format.html { redirect_to :back, notice: 'Template was successfully updated.' }
         format.json { head :no_content }
       else
@@ -103,7 +103,11 @@ class TemplatesController < ApplicationController
   end
 
 
+  private
 
+  def template_params
+    params.require(:template).permit(:admin, :bidding, :change_orders, :commitments, :daily_log, :directory, :documents, :drawings, :emails, :home, :meetings, :name, :photos, :prime_contract, :punch_list, :reports, :rfis, :schedule, :submittals, :transmittals, :account_id, :default, :is_default)
+  end
 
 
 end

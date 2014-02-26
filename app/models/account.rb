@@ -1,5 +1,4 @@
 class Account < ActiveRecord::Base
-  attr_accessible :name, :admin_id
   has_many :templates
   belongs_to :admin
 
