@@ -2,10 +2,10 @@
   <thead>
     <tr>
       <th></th>
-      <th>None</th>
-      <th>Read Only</th>
-      <th>Standard</th>
-      <th>Admin</th>
+      <th>Ninguno</th>
+      <th>Solo Lectura</th>
+      <th>Estandar</th>
+      <th>Administrador</th>
     </tr>
   </thead>
 <%= form_tag update_multiple_templates_path, :method => :put do %>
@@ -13,10 +13,10 @@
     <%= fields_for "templates[]", template do |f| %>
         <tr>
           <td><%= template.name %></td>
-    	  	<td><%= f.radio_button current_tab, 'None' %></td>
-    	    <td><%= f.radio_button current_tab, 'Read Only' %></td>
-    	    <td><%= f.radio_button current_tab, 'Standard' %></td>
-    	    <td><%= f.radio_button current_tab, 'Admin' %></td>
+    	  	<td><%= f.radio_button current_tab, 'Ninguno' %></td>
+    	    <td><%= f.radio_button current_tab, 'Solo Lectura' %></td>
+    	    <td><%= f.radio_button current_tab, 'Estandar' %></td>
+    	    <td><%= f.radio_button current_tab, 'Administrador' %></td>
         </tr>
     <% end %>
   <% end %>
@@ -25,11 +25,11 @@
 </table>
 <br />
   <div>
-      <% if params[:action] != 'admin' %>
-        <%= submit_tag "Save and Next", :class => 'btn' %>
+      <% if params[:action] != 'administrador' %>
+        <%= submit_tag "Guardar y Siguiente", :class => 'btn' %>
       <% else %>
-        <p> Send your templates to your Account Manager! </p>
-        <%= submit_tag "Save and Email", :class => 'btn' %>
+        <p> ¡Envie sus plantillas a su Gerente de Cuenta! </p>
+        <%= submit_tag "Guardar y Enviar", :class => 'btn' %>
       <% end %>
   </div>
 <% end %>
